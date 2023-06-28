@@ -2,9 +2,11 @@
 
 Shopping list app lets people create, share or remove a shopping list.     
 
-![image](https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/2963ad02-139f-4ced-99f0-25318f636126)
-![image](https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/7854013d-e0c4-4844-8bc3-b43789beb0a5)
-![image](https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/6fcebf80-3295-439c-9715-194714de22a3)
+<img src = "https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/2963ad02-139f-4ced-99f0-25318f636126" width="300px">
+&nbsp &nbsp &nbsp &nbsp
+<img src = "https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/7854013d-e0c4-4844-8bc3-b43789beb0a5" width="300px">
+&nbsp &nbsp &nbsp &nbsp
+<img src = "https://github.com/ZhanabekZ/Shopping-list-app/assets/88929831/6fcebf80-3295-439c-9715-194714de22a3" width="300px">
 
 It was a table view that showed items from an array shoppingList, and I used a UIAlertController with a text field to let users enter free text that got appended to the array. That forms the foundation of this app – if users enter some text, app assumes it’s a real product and adds it to their list.
 
