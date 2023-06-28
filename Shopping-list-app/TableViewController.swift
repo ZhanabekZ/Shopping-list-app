@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     var shoppingList = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Collect your shopping list"
@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(removeAll))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
-      
+        
         toolbarItems = [share]
         navigationController?.isToolbarHidden = false
     }
@@ -64,7 +64,7 @@ class ViewController: UITableViewController {
             return
         }
         else {
-            errorTitle = "You have written nothing!"
+            errorTitle = "You have written nothing."
         }
         showErrorMessage(errorTitle: errorTitle)
     }
@@ -80,7 +80,18 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
-
-
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            shoppingList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .middle)
+            
+        }
+    }
 }
-
